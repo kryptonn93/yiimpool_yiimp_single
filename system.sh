@@ -40,7 +40,7 @@ fi
 echo -e "$GREEN Done...$COL_RESET"
 
 # Add repository
-echo -e "$YELLOWAdding the required repsoitories...$COL_RESET"
+echo -e "$YELLOW Adding the required repsoitories...$COL_RESET"
 if [ ! -f /usr/bin/add-apt-repository ]; then
 echo -e "$YELLOW Installing add-apt-repository... $COL_RESET"
 hide_output sudo apt-get -y update
