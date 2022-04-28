@@ -90,9 +90,9 @@ echo -e "$GREEN Passwords can be found in $RED $STORAGE_ROOT/yiimp/.my.cnf $COL_
 echo -e "$YELLOW Importing YiiMP Default database values...$COL_RESET"
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/sql
 # import SQL dump
-sudo zcat 2020-11-10-yaamp.sql.gz  | sudo mysql -u root -p"${DBRootPassword}" "${YiiMPDBName}"
+sudo zcat 2019-11-10-yiimp.sql.gz  | sudo mysql -u root -p"${DBRootPassword}" "${YiiMPDBName}"
 sudo mysql -u root -p"${DBRootPassword}" "${YiiMPDBName}" --force < 2018-09-22-workers.sql
-echo -e "$GREEN Sussessfully import SQL DUMP $COL_RESET" "$YELLOW 2020-11-10-yaamp.sql.gz ...$COL_RESET"
+echo -e "$GREEN Sussessfully import SQL DUMP $COL_RESET" "$YELLOW 2019-11-10-yiimp.sql.gz ...$COL_RESET"
 
 echo -e "$YELLOW Tweaking MariaDB for better performance...$COL_RESET"
 if [[ ("$wireguard" == "false") ]]; then
