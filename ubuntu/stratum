@@ -131,8 +131,12 @@ keccakstop='screen -X -S keccak quit'
 
 keccakc="screen -dmS keccakc bash $STRATUM_DIR/run.sh keccakc"
 keccakcstop='screen -X -S keccakc quit'
+
 kawpow="screen -dms kawpow bash $STRATUM_DIR/run.sh kawpow"
-kawpowstopstop='screen -X -S kawpow quit'
+kawpowstop='screen -X -S kawpow quit'
+
+heavyhash="screen -dms heavyhash bash $STRATUM_DIR/run.sh heavyhash"
+heavyhashstop='screen -X -S heavyhash quit'
 
 hex="screen -dmS hex bash $STRATUM_DIR/run.sh hex"
 hexstop='screen -X -S hex quit'
@@ -155,6 +159,9 @@ blakestop='screen -X -S blake quit'
 blakecoin="screen -dmS blakecoin bash $STRATUM_DIR/run.sh blakecoin"
 blakecoinstop='screen -X -S blakecoin quit'
 
+cosa="screen -dmS cosa bash $STRATUM_DIR/run.sh cosa"
+cosastop='screen -X -S cosa quit'
+
 decred="screen -dmS decred bash $STRATUM_DIR/run.sh decred"
 decredstop='screen -X -S decred quit'
 
@@ -175,6 +182,12 @@ luffastop='screen -X -S luffa quit'
 
 m7m="screen -dmS m7m bash $STRATUM_DIR/run.sh m7m"
 m7mstop='screen -X -S m7m quit'
+
+minotaur="screen -dmS minotaur bash $STRATUM_DIR/run.sh minotaur"
+minotaur='screen -X -S minotaur quit'
+
+minotaurx="screen -dmS minotaurx bash $STRATUM_DIR/run.sh minotaurx"
+minotaur='screen -X -S minotaurx quit'
 
 veltor="screen -dmS veltor bash $STRATUM_DIR/run.sh veltor"
 veltorstop='screen -X -S veltor quit'
@@ -1137,6 +1150,57 @@ startstop_x16rv2() {
     esac
 }
 
+startstop_heavyhash() {
+    cmd=$1
+    case $cmd in
+    stop) $heavyhashstop ;;
+    start) $heavyhash ;;
+    restart)
+        $heavyhashstop
+        sleep 1
+        $heavyhash
+        ;;
+    esac
+}
+
+startstop_cosa() {
+    cmd=$1
+    case $cmd in
+    stop) $cosastop ;;
+    start) $cosa ;;
+    restart)
+        $cosastop
+        sleep 1
+        $cosa
+        ;;
+    esac
+}
+
+startstop_minotaur() {
+    cmd=$1
+    case $cmd in
+    stop) $minotaurstop ;;
+    start) $minotaur ;;
+    restart)
+        $minotaurstop
+        sleep 1
+        $minotaur
+        ;;
+    esac
+}
+
+startstop_minotaurx() {
+    cmd=$1
+    case $cmd in
+    stop) $minotaurxstop ;;
+    start) $minotaurx ;;
+    restart)
+        $minotaurxstop
+        sleep 1
+        $minotaurx
+        ;;
+    esac
+}
 
 case "$1" in
     start|stop|restart) cmd=$1 ;;
@@ -1218,6 +1282,11 @@ for name; do
     polytimos) startstop_polytimos $cmd ;;
     skunk) startstop_skunk $cmd ;;
     tribus) startstop_tribus $cmd ;;
+    heavyhash) startstop_heavyhash $cmd ;;
+    cosa) startstop_cosa $cmd $ ;;
+    minotaur) startstop_minotaur $cmd ;;
+    minotaurx) startstop_minotaurx $cmd ;;
+    kawpow) startstop_kawpow $cmd ;;
     a5a) startstop_a5a $cmd ;;
     x16rv2) startstop_x16rv2 $cmd ;;
         *) startstop_service $cmd $name ;;
