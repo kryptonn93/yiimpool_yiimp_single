@@ -92,7 +92,7 @@ cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/sql
 # import SQL dump
 sudo zcat 2019-11-10-yiimp.sql.gz  | sudo mysql -u root -p"${DBRootPassword}" "${YiiMPDBName}"
 sudo mysql -u root -p"${DBRootPassword}" "${YiiMPDBName}" --force < 2018-09-22-workers.sql
-echo -e "$GREEN Sussessfully import SQL DUMP $COL_RESET" "$YELLOW 2019-11-10-yiimp.sql.gz ...$COL_RESET"
+echo -e "$GREEN Sussessfully import SQL DUMP $COL_RESET" "$RED 2019-11-10-yiimp.sql.gz ...$COL_RESET"
 
 echo -e "$YELLOW Tweaking MariaDB for better performance...$COL_RESET"
 if [[ ("$wireguard" == "false") ]]; then

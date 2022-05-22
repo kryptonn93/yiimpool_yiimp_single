@@ -32,13 +32,13 @@ else
 source $STORAGE_ROOT/yiimp/first_boot.sh
 fi
 ################################################################################
-# Author: afiniel
-#
-#
-# Program: yiimp screen startup script
-#
-# BTC Donation: bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r
-#
+# Author: afiniel                                                              #
+#                                                                              #
+#                                                                              #
+# Program: yiimp screen startup script                                         #
+#                                                                              #
+# BTC Donation: bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r                     #
+#                                                                              #
 ################################################################################
 sudo chmod 777 $STORAGE_ROOT/yiimp/site/log/.
 sudo chmod 777 $STORAGE_ROOT/yiimp/site/log/debug.log
@@ -55,13 +55,13 @@ echo -e "$YELLOW Creating Stratum screens start script...$COL_RESET"
 
 echo '#!/usr/bin/env bash
 ################################################################################
-# Author: afiniel
-#
-#
-# Program: yiimp stratum startup script
-#
-# BTC Donation: bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r
-#
+# Author: afiniel                                                              #
+#                                                                              #
+#                                                                              #
+# Program: yiimp stratum startup script                                        #
+#                                                                              #
+# BTC Donation: bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r                     #
+#                                                                              #
 ################################################################################
 source /etc/yiimpool.conf
 source $STORAGE_ROOT/yiimp/.yiimp.conf
