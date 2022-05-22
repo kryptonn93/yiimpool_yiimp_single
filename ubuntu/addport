@@ -30,11 +30,11 @@ function EPHYMERAL_PORT(){
 coinport=$(EPHYMERAL_PORT)
 
 cd /home/crypto-data/yiimp/site/stratum/config
-echo "Thanks for using the addport script by afiniel."
+echo -e "$YELLOW Thanks for using the addport script by afiniel. $COL_RESET"
 echo
-echo "addport will randomly selects an open port for the coin between ports 2768 and 6999 and open the port in UFW."
-echo "It will also create a new symbol.algo.conf in /home/crypto-data/yiimp/site/stratum/config"
-echo "and will create a new stratum.symbol run file in /usr/bin."
+echo -e "$YELLOW addport will randomly selects an open port for the coin between ports 2768 and 6999 and open the port in UFW. $COL_RESET"
+echo -e "$YELLOW It will also create a new symbol.algo.conf in $RED /home/crypto-data/yiimp/site/stratum/config $COL_RESET"
+echo -e "$YELLOW and will create a new stratum.symbol run file in $RED /usr/bin. $COL_RESET"
 echo
 
 echo
@@ -59,11 +59,11 @@ coinsymbol=${coinsymbol^^}
 if [ -f $STORAGE_ROOT/yiimp/site/stratum/config/stratum.${coinsymbollower} ]; then
   read -r -e -p "A file for ${coinsymbol} already exists. Are you sure you want to overwrite? A new port will be generated and you will need to update your coind.conf blocknotify line (y/n) : " overwrite
   if [[ ("$overwrite" == "n" || "$overwrite" == "N" || "$overwrite" == "no" || "$overwrite" == "NO") ]]; then
-    echo -e "Later gator..."
+    echo -e "$RED Exiting... $COL_RESET"
     exit 0
   fi
 if [ ! -f /home/crypto-data/yiimp/site/stratum/config/$coinalgo.conf ]; then
-  echo -e "Sorry that algo config file doesn't exist in /home/crypto-data/yiimp/site/stratum/config/ please double check and try again."
+  echo -e "$YELLOW Sorry that algo config file doesn't exist in $RED /home/crypto-data/yiimp/site/stratum/config/ $YELLOW please double check and try again. $COL_RESET"
   exit 0
 fi
 fi
@@ -73,7 +73,7 @@ if [ -f $STORAGE_ROOT/yiimp/site/stratum/config/$coinsymbollower.$coinalgo.conf 
   if [[ ("$overwrite" == "y" || "$overwrite" == "Y" || "$overwrite" == "yes" || "$overwrite" == "YES") ]]; then
     # Insert the port in to the new symbol.algo.conf
     sed -i '/port/c\port = '${coinport}'' $coinsymbollower.$coinalgo.conf
-    echo -e "Port updated! Remeber to update your blocknotify line!!"
+    echo -e "$YELLOW Port updated! Remeber to update your blocknotify line!! $COL_RESET"
   fi
 else
 # Since this is a new symbol we are going to add it to the other conf files first.
@@ -110,7 +110,7 @@ if ! grep -Fxq "exclude = ${coinsymbol}" "$coinalgo.conf"; then
 [WALLETS]\
 exclude = '${coinsymbol}'' $coinalgo.conf
 else
-  echo -e "${coinsymbol} is already in $coinalgo.conf, skipping... Which means you are trying to run this multiple times for the same coin."
+  echo -e "$YELLOW ${coinsymbol} is already in $coinalgo.conf, skipping... Which means you are trying to run this multiple times for the same coin. $COL_RESET"
 fi
 
 # New coin stratum start file
@@ -170,23 +170,23 @@ echo "Adding stratum.${coinsymbollower} to crontab for autostart at system boot.
 echo
 echo -e "$YELLOW Starting your new stratum...$COL_RESET"
 bash stratum.${coinsymbollower} start ${coinsymbollower}
-echo -e "$GREEN Your new stratum is started...Do NOT run the start command manually...$COL_RESET"
+echo -e "$YELLOW Your new stratum is$GREEN started...$YELLOW Do NOT run the start command manually...$COL_RESET"
 echo
-echo -e "To use your new stratum type,$BLUE stratum.${coinsymbollower} start|stop|restart ${coinsymbollower} $COL_RESET"
+echo -e "$YELLOW To use your new stratum type,$BLUE stratum.${coinsymbollower} start|stop|restart ${coinsymbollower} $COL_RESET"
 echo
-echo -e "To see the stratum screen type,$MAGENTA screen -r ${coinsymbollower} $COL_RESET"
+echo -e "$YELLOW To see the stratum screen type,$MAGENTA screen -r ${coinsymbollower} $COL_RESET"
 echo
-echo -e "The assigned dedicated port for this coins stratum is :$YELLOW $coinport $COL_RESET"
+echo -e "$YELLOW The assigned dedicated port for this coins stratum is :$YELLOW $coinport $COL_RESET"
 echo
-echo "Make sure to add this to the Dedicated Port section in your YiiMP admin area!"
+echo -e "$YELLOW Make sure to add this to the Dedicated Port section in your YiiMP admin panel! $COL_RESET"
 
-echo "Donations for continued support of this script are welcomed at:"
-echo "-----------------------------------------------"
-echo "BTC bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r "
-echo "DOGE DCj73fKJbHeDTJx7arz4z7bbknWkSDpD8h        "
-echo "ETH 0x50C7d0BF9714dBEcDc1aa6Ab0E72af8e6Ce3b0aB "
-echo "LTC ltc1qxk9fl9pj6qjccd7getm0htxssyj44fdmwwqmc2"
-echo "-----------------------------------------------"
+echo -e "$YELLOW Donations for continued support of this script are welcomed at: $COL_RESET"
+echo -e "$YELLOW ----------------------------------------------- $COL_RESET"
+echo -e "$YELLOW BTC: $CYAN bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r $COL_RESET"
+echo -e "$YELLOW DOGE $CYAN DCj73fKJbHeDTJx7arz4z7bbknWkSDpD8h        $COL_RESET"
+echo -e "$YELLOW ETH  $CYAN 0x50C7d0BF9714dBEcDc1aa6Ab0E72af8e6Ce3b0aB $COL_RESET"
+echo -e "$YELLOW LTC  $CYAN ltc1qxk9fl9pj6qjccd7getm0htxssyj44fdmwwqmc2 $COL_RESET"
+echo -e "$YELLOW ----------------------------------------------- $COL_RESET"
 
 cd ~
 exit 0

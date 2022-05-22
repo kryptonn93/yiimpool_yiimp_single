@@ -21,7 +21,7 @@ trap print_error ERR
 if [[ ("$wireguard" == "true") ]]; then
 source $STORAGE_ROOT/yiimp/.wireguard.conf
 fi
-echo -e " Creating initial SSL certificate...$COL_RESET"
+echo -e "$YELLOW Creating initial SSL certificate...$COL_RESET"
 
 
 # Install openssl.

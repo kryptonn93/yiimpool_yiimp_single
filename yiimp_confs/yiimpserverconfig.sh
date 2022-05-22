@@ -47,7 +47,7 @@ define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh
 
 define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${DomainName}"''"'"');
 define('"'"'YAAMP_STRATUM_URL'"'"', '"'"''"${StratumURL}"''"'"'); // change if your stratum server is on a different host
-define('"'"'YAAMP_SITE_NAME'"'"', '"'"'afiniel'"'"');
+define('"'"'YAAMP_SITE_NAME'"'"', '"'"'YiimPool'"'"'); // Change to your website name.
 define('"'"'YAAMP_ADMIN_EMAIL'"'"', '"'"''"${SupportEmail}"''"'"');
 define('"'"'YAAMP_ADMIN_IP'"'"', '"'"''"${PublicIP}"''"'"'); // samples: "80.236.118.26,90.234.221.11" or "10.0.0.1/8"
 
@@ -127,17 +127,17 @@ define('"'"'YAAMP_DBUSER'"'"', '"'"''"${YiiMPPanelName}"''"'"');
 define('"'"'YAAMP_DBPASSWORD'"'"', '"'"''"${PanelUserDBPassword}"''"'"');
 
 define('"'"'YAAMP_PRODUCTION'"'"', true);
-define('"'"'YAAMP_RENTAL'"'"', false);
+define('"'"'YAAMP_RENTAL'"'"', false); // For rental services
 
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
 
-define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
-define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
-define('"'"'YAAMP_FEES_RENTING'"'"', 2);
+define('"'"'YAAMP_FEES_MINING'"'"', 0.5); // Set pool fee here
+define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2); // Set Exchange fee here
+define('"'"'YAAMP_FEES_RENTING'"'"', 2); // If rental is enable set rental fee here
 define('"'"'YAAMP_TXFEE_RENTING_WD'"'"', 0.002);
 
-define('"'"'YAAMP_PAYMENTS_FREQ'"'"', 3*60*60);
-define('"'"'YAAMP_PAYMENTS_MINI'"'"', 0.001);
+define('"'"'YAAMP_PAYMENTS_FREQ'"'"', 3*60*60); // Set how often the pool will do payouts here
+define('"'"'YAAMP_PAYMENTS_MINI'"'"', 0.001); // Set minimum payout amount here.
 
 define('"'"'YAAMP_ALLOW_EXCHANGE'"'"', false);
 define('"'"'YIIMP_PUBLIC_EXPLORER'"'"', false);
