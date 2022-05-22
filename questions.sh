@@ -13,15 +13,15 @@ source $STORAGE_ROOT/yiimp/.wireguard.conf
 fi
 
 if [[ ("$wireguard" == "true") ]]; then
-message_box "Yiimpool Yiimp installer v1.0.4-beta" \
-"You have choosen to install Yiimpool Yiimp v1.0.4-beta with WireGuard!
+message_box "Yiimpool Yiimp installer v1.0.4" \
+"You have choosen to install Yiimpool Yiimp v1.0.4 with WireGuard!
 \n\nThis option will install all componets of YiiMP on a single server along with WireGuard so you can easily add additional servers in the future.
 \n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
 \n\nNOTE: If installing on a system with less then 8 GB of RAM you may experience system issues!"
 else
-message_box "Yiimpool Yiimp installer v1.0.4-beta" \
-"You have choosen to install Yiimpool Yiimp v1.0.4-beta!
+message_box "Yiimpool Yiimp installer v1.0.4" \
+"You have choosen to install Yiimpool Yiimp v1.0.4!
 \n\nThis option will install all componets of YiiMP on a single server.
 \n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
