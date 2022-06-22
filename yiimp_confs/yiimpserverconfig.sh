@@ -28,6 +28,7 @@ define('"'"'YAAMP_RENTAL'"'"', false);
 
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
 
+define('"'"'YAAMP_FEES_MINING'"'"', 0.5); // Set Pool Fee (non solo)
 define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
 define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
 define('"'"'YAAMP_FEES_RENTING'"'"', 2);
@@ -102,6 +103,13 @@ $configFixedPoolFees = array(
 '"'"'sha256'"'"' => 5.0,
 );
 
+// Sample fixed pool fees solo , With 1.5 default set.
+$configFixedPoolFeesSolo = array(
+'"'"'zr5'"'"' => 1.5,
+'"'"'scrypt'"'"' => 1.5,
+'"'"'sha256'"'"' => 1.5,
+);
+
 // Sample custom stratum ports
 $configCustomPorts = array(
 // '"'"'x11'"'"' => 7000,
@@ -131,7 +139,8 @@ define('"'"'YAAMP_RENTAL'"'"', false); // For rental services
 
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
 
-define('"'"'YAAMP_FEES_MINING'"'"', 0.5); // Set pool fee here
+define('"'"'MINING_FEES_SOLO'"'"', 1.5);  // Set Pool Solo Fee
+define('"'"'YAAMP_FEES_MINING'"'"', 0.5); // Set Pool Fee (non solo)
 define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2); // Set Exchange fee here
 define('"'"'YAAMP_FEES_RENTING'"'"', 2); // If rental is enable set rental fee here
 define('"'"'YAAMP_TXFEE_RENTING_WD'"'"', 0.002);
@@ -203,6 +212,13 @@ $configFixedPoolFees = array(
 '"'"'zr5'"'"' => 2.0,
 '"'"'scrypt'"'"' => 20.0,
 '"'"'sha256'"'"' => 5.0,
+);
+
+// Sample fixed pool fees solo , With 1.5 default set.
+$configFixedPoolFeesSolo = array(
+'"'"'zr5'"'"' => 1.5,
+'"'"'scrypt'"'"' => 1.5,
+'"'"'sha256'"'"' => 1.5,
 );
 
 // Sample custom stratum ports
