@@ -28,7 +28,7 @@ define('"'"'YAAMP_RENTAL'"'"', false);
 
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
 
-define('"'"'YAAMP_FEES_MINING'"'"', 0.5); // Set Pool Fee (non solo)
+define('"'"'YAAMP_FEES_SOLO'"'"', 0.5); // Set Pool Fee (non solo)
 define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
 define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
 define('"'"'YAAMP_FEES_RENTING'"'"', 2);
