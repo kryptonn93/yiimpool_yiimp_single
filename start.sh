@@ -49,9 +49,11 @@ source nginx_upgrade.sh
 source web.sh
 source stratum.sh
 source daemon.sh
-if [[ ("$UsingDomain" == "yes") ]]; then
-source send_mail.sh
-fi
+
+# if [[ ("$UsingDomain" == "yes") ]]; then
+# source send_mail.sh
+# fi
+
 source server_cleanup.sh
 source motd.sh
 source server_harden.sh
@@ -60,7 +62,7 @@ source $STORAGE_ROOT/yiimp/.yiimp.conf
 clear
 
 if [[ ("$UsingDomain" == "yes") ]]; then
-  echo -e "Installation of your Yiimpool Yiimp v2.0 is now completed."
+  echo -e "Installation of your Yiimpool Yiimp v2.1 is now completed."
   echo -e "You $RED*MUST REBOOT*$COL_RESET the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a reboot is performed!$COL_RESET"
   echo
   echo -e "$YELLOW Important!$COL_RESET After first reboot it may take up to 1 minute for the main|loop2|blocks|debug screens to start!"
@@ -71,7 +73,7 @@ if [[ ("$UsingDomain" == "yes") ]]; then
   echo -e "$RED By default all stratum ports are blocked by the firewall.$COL_RESET To allow a port through, from the command prompt type $GREEN sudo ufw allow port number.$COL_RESET"
   echo "Database user names and passwords can be found in $STORAGE_ROOT/yiimp_setup/.my.cnf"
 else
-  echo -e "Installation of your Yiimpool Yiimp v2.0 is now completed."
+  echo -e "Installation of your Yiimpool Yiimp v2.1 is now completed."
   echo -e "You $RED*MUST REBOOT*$COL_RESET the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a reboot is performed!$COL_RESET"
   echo
   echo -e "$YELLOW Important!$COL_RESET After first reboot it may take up to 1 minute for the main|loop2|blocks|debug screens to start!"
@@ -88,14 +90,14 @@ echo
 echo -e "$YELLOW Happy mining $COL_RESET"
 echo "----------------------------------------------------------------------------"
 echo
-echo -e "$GREEN Thank you for using Afiniel Yiimpool Installer v2.0!$COL_RESET"
+echo -e "$GREEN Thank you for using Afiniel Yiimpool Installer v2.1!$COL_RESET"
 echo
 echo -e "$YELLOW To run this installer anytime simply type, $GREEN yiimpool $COL_RESET"
 echo -e "$YELLOW If you want to support by donate, use wallet below $COL_RESET"
 echo
-echo -e "$YELLOW BTC:$COL_RESET $GREEN bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r  $COL_RESET"
-echo -e "$YELLOW BCH:$COL_RESET $GREEN qpy2ehcxtddkfrrxqyq5skrvace66wvuqyuyzc87sc  $COL_RESET"
+echo -e "$YELLOW BTC:$COL_RESET $GREEN bc1q582gdvyp09038hp9n5sfdtp0plkx5x3yrhq05y  $COL_RESET"
+echo -e "$YELLOW BCH:$COL_RESET $GREEN qzz0aff2k0xnwyzg7k9fcxlndtaj4wa65uxteqe84m  $COL_RESET"
 echo -e "$YELLOW ETH:$COL_RESET $GREEN 0x50C7d0BF9714dBEcDc1aa6Ab0E72af8e6Ce3b0aB  $COL_RESET"
-echo -e "$YELLOW DOGE:$COL_RESET $GREEN DCj73fKJbHeDTJx7arz4z7bbknWkSDpD8h         $COL_RESET"
+echo -e "$YELLOW DOGE:$COL_RESET $GREEN DSzcmyCRi7JeN4XUiV2qYhRQAydNv7A1Yb         $COL_RESET"
 echo "----------------------------------------------------------------------------"
 exit 0

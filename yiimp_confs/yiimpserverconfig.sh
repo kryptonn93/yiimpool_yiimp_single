@@ -44,7 +44,7 @@ define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', false);
 define('"'"'YIIMP_FIAT_ALTERNATIVE'"'"', '"'"'USD'"'"'); // USD is main
 define('"'"'YAAMP_USE_NICEHASH_API'"'"', false);
 
-define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r'"'"');
+define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'bc1q582gdvyp09038hp9n5sfdtp0plkx5x3yrhq05y'"'"');
 
 define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${DomainName}"''"'"');
 define('"'"'YAAMP_STRATUM_URL'"'"', '"'"''"${StratumURL}"''"'"'); // change if your stratum server is on a different host
@@ -93,7 +93,7 @@ define('"'"'NICEHASH_DEPOSIT'"'"','"'"'3J9tapPoFCtouAZH7Th8HAPsD8aoykEHzk'"'"');
 define('"'"'NICEHASH_DEPOSIT_AMOUNT'"'"','"'"'0.01'"'"');
 
 $cold_wallet_table = array(
-'"'"'bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r'"'"' => 0.10,
+'"'"'bc1q582gdvyp09038hp9n5sfdtp0plkx5x3yrhq05y'"'"' => 0.10,
 );
 
 // Sample fixed pool fees
@@ -155,7 +155,7 @@ define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', false);
 define('"'"'YIIMP_FIAT_ALTERNATIVE'"'"', '"'"'USD'"'"'); // USD is main
 define('"'"'YAAMP_USE_NICEHASH_API'"'"', false);
 
-define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r'"'"');
+define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'bc1q582gdvyp09038hp9n5sfdtp0plkx5x3yrhq05y'"'"');
 
 define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${DomainName}"''"'"');
 define('"'"'YAAMP_STRATUM_URL'"'"', '"'"''"${StratumURL}"''"'"'); // change if your stratum server is on a different host
@@ -204,7 +204,7 @@ define('"'"'NICEHASH_DEPOSIT'"'"','"'"'3J9tapPoFCtouAZH7Th8HAPsD8aoykEHzk'"'"');
 define('"'"'NICEHASH_DEPOSIT_AMOUNT'"'"','"'"'0.01'"'"');
 
 $cold_wallet_table = array(
-'"'"'bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r'"'"' => 0.10,
+'"'"'bc1q582gdvyp09038hp9n5sfdtp0plkx5x3yrhq05y'"'"' => 0.10,
 );
 
 // Sample fixed pool fees
